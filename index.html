@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<title>Marcos Projects</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Playfair Display";
+    letter-spacing: 5px;
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <a href="#home" class="w3-bar-item w3-button">Marcos Willians - Projetos de Hardware e Software</a>
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">Sobre</a>
+      <a href="#menu" class="w3-bar-item w3-button">Projetos</a>
+      <a href="#contact" class="w3-bar-item w3-button">Contato</a>
+    </div>
+  </div>
+</div>
+
+<br><br>
+<br><br>	
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px">
+
+  <!-- About Section -->
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="image/imageabout.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">Sobre o Site</h1><br>
+      <p class="w3-large"> Esse site foi criado para o compartilhamento dos meus projetos e hobby na área de eletrônica e computação. Todo o conteúdo publicado aqui é de minha autoria, e pode ser baixado e utilizado sem restrições. Caso não encontre todas as informações sobre algum projeto aqui listado, envie-me um e-mail para que eu possa lhe ajudar.</p>
+     </div>
+  </div>
+  
+  <hr>
+  
+  <!-- Menu Section -->
+  <div class="w3-row w3-padding-64" id="menu">
+    <div class="w3-col l6 w3-padding-large">
+	  <h1 class="w3-center">Projeto FSM-PLC</h1><br>	      
+      <h4>A Linguagem</h4>
+      <p class="w3-text-grey">O projeto FSM-PLC consistiu da criação de uma nova linguagem de programação para PLCs, baseada em máquinas de estados finitos.</p><br>
+    
+      <h4>A IDE</h4>
+      <p class="w3-text-grey"> A interface de programação do FSM-PLC foi um software desenvolvido em C#, contendo um compilador,um depurador,um simulador e uma aplicação para o upload do bytecode FSM para os PLCs. Aqui segue o instalador da IDE do FSM-PLC para Windows: <a href="files/IDE_FSMPLC_SETUP.zip">IDE_FSMPLC_SETUP.zip</a></p><br>
+    
+      <h4>O Hardware</h4>
+      <p class="w3-text-grey">O FSM-PLC foi desenvolvido nas versões STM32 e PIC18, ambos rodando a máquina virtual FSM com instruções específicas da linguagem. Segue o projeto eletrônico do FSM-PLC: O hardware <a href="files/HARDWARE_FSMPLC_PIC.zip">HARDWARE_FSMPLC_PIC.zip</a> e o firmware <a href="files/FIRMWARE_FSMPLC_PIC.zip">FIRMWARE_FSMPLC_PIC.zip</a></p><br>
+    
+      <h4>Os Resultados</h4>
+      <p class="w3-text-grey">A arquitetura otimizada baseada em máquinas de estados da linguagem FSM dobrou a velocidade de execução dos programas de automação (no pior caso), quando comparada às linguagens de mercado (Ladder e FBD). A execução dos projetos também ficou mais rápida, uma vez que a linguagem FSM é mais simples e intuitiva para os engenheiros de sistemas de automação.</p><br>
+      
+    </div>
+    
+    <div class="w3-col l6 w3-padding-large">
+      <img src="image/demofsmplc.jpg" class="w3-round w3-image " alt="Menu" style="width:100%">
+    </div>
+		
+	<div class="w3-col l6 w3-padding-large">
+      <iframe width="500" height="315" src="https://www.youtube.com/embed/zNEf9mt6gng" frameborder="0" allowfullscreen></iframe>
+    </div>
+	
+  </div>
+  
+  <hr>
+
+  
+   <!-- Menu Section -->
+  <div class="w3-row w3-padding-64" id="arise">
+    <div class="w3-col l6 w3-padding-large">
+	  <h1 class="w3-center">Projeto Arise</h1><br>	      
+     
+	 <h4>A Arise</h4>
+      <p class="w3-text-grey">A Arise foi uma empresa que criei para o desenvolvimento e fabricação de produtos eletrônicos na área de automação residencial.Infelizmente as suas atividades foram encerradas devido a crise econômica. Fomos pioneiros no Brasil na transmissão de dados pela rede elétrica para automação residencial.</p><br>
+    	
+      <h4>A Tecnologia</h4>
+      <p class="w3-text-grey">Os dispositivos de automação residencial da Arise se comunicavam pela rede elétrica usando um modem e um protocolo comunicação que desenvolvi. Esse protocolo permitiu uma comunicação efetiva em todos os lugares em que foi instalado, sendo o maior deles um prédio de 14 andares. A seguir o link de alguns manuais e datasheets que produzi para uma descrição mais detalhada <a href="files/Arise Manuais.zip">Arise Manuais.zip</a></p><br>
+    
+      <h4>O Hardware</h4>
+      <p class="w3-text-grey"> Os produtos de hardware da Arise permitiam que o usuário pudesse controlar a iluminação, ar condicionado e demais aparelhos da casa através de um tablet, ou programações (via PC) que deixavam a casa mais inteligente(reagindo aos ocupantes conforme regras preestabelecidas).Esse hardware não é mais comercializado, assim resolvi diponibilizá-lo no seguinte link:<a href="files/Arise_PCBs.zip">Arise_PCBs.zip</a>  </p><br>
+          
+	  <h4>O Software</h4>
+      <p class="w3-text-grey">O software da Arise consistia de aplicações em Windows feitas em C# para a programação dos módulos e de aplicativos para o acesso do usuário, no Android e IOS. O APP para Android pode se baixado no seguinte link: <a href="files/RControl.apk">RControl.apk</a> </p><br>
+    
+	 
+	 
+    </div>
+    
+    <div class="w3-col l6 w3-padding-large">
+      <img src="image/arise.jpg" class="w3-round w3-image " alt="Menu" style="width:100%">
+    </div>
+	
+	  <div class="w3-col l6 w3-padding-large">
+      <img src="image/ircontrol.jpg" class="w3-round w3-image " alt="Menu" style="width:100%">
+    </div>
+		
+	
+	
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+   <!-- Menu Section -->
+  <div class="w3-row w3-padding-64" id="outrosprojetos">
+    <div class="w3-col l6 w3-padding-large">
+	  <h1 class="w3-center">Outros Projetos</h1><br>	      
+     
+	  <h4>Audio Player STM32</h4>
+      <p class="w3-text-grey">Esse projeto foi desenvolvido com microcontrolador STM32F103ZET6, sendo capaz de executar um arquivo de audio a partir de um cartão SD comum. O projeto, que pode ser compilado no AC6, segue no arquivo:<a href="files/STM32F103ZET6_AudioPlayer.zip">STM32F103ZET6_AudioPlayer.zip</a></p> 
+      <br><br><br><br><br>
+	
+	  <h4>Simulador de voo</h4>
+      <p class="w3-text-grey">Esse projeto é composto de um software, feito em C#, que captura os dados de telemetria do Flight Simulator X para o envio para uma rede de atuadores conectados à uma porta serial. Um circuito com microcontrolador PIC e dois atuadores foram desenvolvidos para o projeto: o altímetro e o atuador mecânico de inclinação longitudinal e transversal da aeronave.O arquivos fonte do projeto do simulador de voo, seguem no link:  <a href="files/SIMULADOR_FSX.zip">SIMULADOR_FSX.zip</a></p>
+	  <br><br><br><br><br><br>
+	 
+	 
+	  <h4>Emulador CHIP8</h4>
+      <p class="w3-text-grey">Chip8 foi uma arquitetura de máquina virtual utilizada em alguns computadores da década de 80. Esse projeto consiste de um emulador dessa arquitetura em um APP feito em Java, para o Android. O arquivo APK do projeto e os arquivos fonte seguem no link: <a href="files/chip8.zip">chip8.zip</a></p>
+	  <br><br><br><br><br><br><br><br><br>
+
+	  <h4>Controlador Digital</h4>
+      <p class="w3-text-grey">Demonstração do algoritmo de controle digital em uma simulação do controle de altitude de um foguete, atuando na potência de seus propulsores. Esse projeto está disponível em linguagem C# no link: <a href="files/ControleDigital.zip">ControleDigital.zip</a></p>
+	  <br><br><br><br><br><br><br><br><br><br>
+	
+	  <h4>Algoritmo Genético</h4>
+      <p class="w3-text-grey">Aplicação de teste do algoritmo genético associado a resolução de  problemas de roteamento. Outros tipos de problemas podem ser resolvidos com as bibliotecas desenvolvidas nesse projeto, feito em C#. Disponível no link: <a href="files/Genetic.zip">Genetic.zip</a></p>
+	  <br><br><br><br>
+	  
+	  <h4>Processador Neural</h4>
+      <p class="w3-text-grey">Este projeto consiste num processador de redes neurais para o uso em FPGAs Altera/Intel. O processador inclui instruções para o processamento do algoritmo forwardpropagation e backpropagation, e pode trabalhar com neurônios com funções de ativação ReLU (rectified linear unit). O processador opera com instruções de ponto fixo, para uma operação mais rápida e menor utilização de elementos lógicos. Esse projeto foi testado numa FPGA CycloneIII, que pode suportar até 15 desses processadores neurais, operando em paralelo. O projeto completo, feito em VHDL, pode ser baixado do seguinte link:<a href="files/Neural.zip">Neural.zip</a></p>
+	  <br><br><br><br><br>
+	  
+	  
+	  <h4>Processamento de imagem em C++</h4>
+      <p class="w3-text-grey">Este é um projeto de um simulador de corrida desenvolvido em C++ Pode ser baixado do seguinte link:<a href="files/OpenCVTest.zip">OpenCVTest.zip</a> e  <a href="files/OpenCVTest.z01">OpenCVTest.z01</a></p>
+	  <br><br><br><br><br><br><br><br>
+	  
+	  
+	  <h4>Sintetizador de Audio em C++</h4>
+      <p class="w3-text-grey">Este projeto é wrapper da API XAudio sendo usado para construir um sintetizador de áudio. No exemplo é emulado o mesmo som do sintetizador usado por Ferris Bueller no filme "Curtindo a vida adoidado". Disponível do seguinte link:<a href="files/SynthesizerDemo.zip">SynthesizerDemo.zip</a></p>
+	  <br><br><br><br><br><br><br><br>
+	 
+    </div>
+    
+	<div class="w3-col l6 w3-padding-large">		
+		 <iframe width="500" height="315" src="https://www.youtube.com/embed/a1es98JdZoc" frameborder="0" allowfullscreen></iframe>
+	</div>
+	
+	<div class="w3-col l6 w3-padding-large">		
+		 <iframe width="500" height="315" src="https://www.youtube.com/embed/MMP6gXE43vI" frameborder="0" allowfullscreen></iframe>
+	</div>
+		
+	<div class="w3-col l6 w3-padding-large">		
+		<iframe width="500" height="315" src="https://www.youtube.com/embed/sVe7p0PfDD0" frameborder="0" allowfullscreen></iframe>
+	</div>
+
+	<div class="w3-col l6 w3-padding-large">
+      <img src="image/foguete.png" class="w3-round w3-image " alt="Menu" style="width:100%">
+    </div>
+ 
+	<div class="w3-col l6 w3-padding-large">
+      <img src="image/genetico.png" class="w3-round w3-image " alt="Menu" style="width:100%">
+    </div>	
+	
+	<div class="w3-col l6 w3-padding-large">
+      <img src="image/neural.png" class="w3-round w3-image " alt="Menu" style="width:100%">
+    </div>	
+	
+	<div class="w3-col l6 w3-padding-large">		
+		<iframe width="500" height="315" src="https://www.youtube.com/embed/lA1TYUoVeNA" frameborder="0" allowfullscreen></iframe>
+	</div>
+	
+	<div class="w3-col l6 w3-padding-large">		
+		<iframe width="500" height="315" src="https://www.youtube.com/embed/qe3EA98zTiQ" frameborder="0" allowfullscreen></iframe>
+	</div>
+	
+  </div>
+  
+  
+  
+  <hr>
+  
+  
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-64" id="contact">
+    <h1>Contato</h1><br>
+    <p>Caso precise de alguma ajuda com os projetos aqui listados, entre em contato pelo e-mail: marcosfpga@gmail.com.</p>    
+  </div>
+  
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-32">
+ 
+</footer>
+
+</body>
+</html>
