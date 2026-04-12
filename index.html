@@ -11,6 +11,53 @@ h1,h2,h3,h4,h5,h6 {
     font-family: "Playfair Display";
     letter-spacing: 5px;
 }
+
+.project-grid {
+  display: grid;
+  gap: 28px;
+}
+
+.project-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+  border: 1px solid #d8d8d8;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #ffffff 0%, #f9f9f9 100%);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+}
+
+.project-item h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.project-item p {
+  margin: 0;
+}
+
+.project-media {
+  width: 100%;
+}
+
+.project-iframe,
+.project-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 10px;
+  display: block;
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .project-item {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
 <body>
 
@@ -118,99 +165,120 @@ h1,h2,h3,h4,h5,h6 {
   
   
    <!-- Menu Section -->
-  <div class="w3-row w3-padding-64" id="outrosprojetos">
-    <div class="w3-col l6 w3-padding-large">
-	  <h1 class="w3-center">Outros Projetos</h1><br>	      
-     
-  	  <h4>Basic language interpreter for ESP32</h4>
-        <p class="w3-text-grey">Esse e um interpretador de linguagem BASIC que eu desenvolvi usando C++ para o ESP32. Nessa aplicacao, o usuario pode criar programas tradicionais em BASIC usando texto e tambem permite a criacao de graficos usando funcoes embutidas no interpretador. GitHub: <a href="https://github.com/MarcosWillians/BasicESP32">https://github.com/MarcosWillians/BasicESP32</a> | YouTube: <a href="https://www.youtube.com/watch?v=6DPkey17IP0">https://www.youtube.com/watch?v=6DPkey17IP0</a></p>
-        <br><br><br><br><br>
+  <div class="w3-padding-64" id="outrosprojetos">
+    <h1 class="w3-center">Outros Projetos</h1><br>
 
-  	  <h4>PIC16 processor coded in Verilog + Assembly test</h4>
-        <p class="w3-text-grey">Essa e uma implementacao que eu fiz do processador do microcontrolador PIC. No video, uma demonstracao do funcionamento do processador a partir da ativacao de suas instrucoes usando um codigo no seu assembly. YouTube: <a href="https://www.youtube.com/watch?v=YODckXOewSk">https://www.youtube.com/watch?v=YODckXOewSk</a></p>
-        <br><br><br><br><br>
+    <div class="project-grid">
+      <article class="project-item">
+        <div>
+          <h4>Basic language interpreter for ESP32</h4>
+          <p class="w3-text-grey">Esse e um interpretador de linguagem BASIC que eu desenvolvi usando C++ para o ESP32. Nessa aplicacao, o usuario pode criar programas tradicionais em BASIC usando texto e tambem permite a criacao de graficos usando funcoes embutidas no interpretador. GitHub: <a href="https://github.com/MarcosWillians/BasicESP32">https://github.com/MarcosWillians/BasicESP32</a> | YouTube: <a href="https://www.youtube.com/watch?v=6DPkey17IP0">https://www.youtube.com/watch?v=6DPkey17IP0</a></p>
+        </div>
+        <div class="project-media">
+          <iframe class="project-iframe" src="https://www.youtube.com/embed/6DPkey17IP0" title="Basic language interpreter for ESP32" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </article>
 
-	  <h4>Audio Player STM32</h4>
-      <p class="w3-text-grey">Esse projeto foi desenvolvido com microcontrolador STM32F103ZET6, sendo capaz de executar um arquivo de audio a partir de um cartão SD comum. O projeto, que pode ser compilado no AC6, segue no arquivo:<a href="files/STM32F103ZET6_AudioPlayer.zip">STM32F103ZET6_AudioPlayer.zip</a></p> 
-      <br><br><br><br><br>
-	
-    
+      <article class="project-item">
+        <div>
+          <h4>PIC16 processor coded in Verilog + Assembly test</h4>
+          <p class="w3-text-grey">Essa e uma implementacao que eu fiz do processador do microcontrolador PIC. No video, uma demonstracao do funcionamento do processador a partir da ativacao de suas instrucoes usando um codigo no seu assembly. YouTube: <a href="https://www.youtube.com/watch?v=YODckXOewSk">https://www.youtube.com/watch?v=YODckXOewSk</a></p>
+        </div>
+        <div class="project-media">
+          <iframe class="project-iframe" src="https://www.youtube.com/embed/YODckXOewSk" title="PIC16 processor coded in Verilog + Assembly test" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </article>
 
+      <article class="project-item">
+        <div>
+          <h4>Audio Player STM32</h4>
+          <p class="w3-text-grey">Esse projeto foi desenvolvido com microcontrolador STM32F103ZET6, sendo capaz de executar um arquivo de audio a partir de um cartao SD comum. O projeto, que pode ser compilado no AC6, segue no arquivo: <a href="files/STM32F103ZET6_AudioPlayer.zip">STM32F103ZET6_AudioPlayer.zip</a></p>
+        </div>
+        <div class="project-media">
+          <iframe class="project-iframe" src="https://www.youtube.com/embed/a1es98JdZoc" title="Audio Player STM32" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </article>
 
-	  <h4>Simulador de voo</h4>
-      <p class="w3-text-grey">Esse projeto é composto de um software, feito em C#, que captura os dados de telemetria do Flight Simulator X para o envio para uma rede de atuadores conectados à uma porta serial. Um circuito com microcontrolador PIC e dois atuadores foram desenvolvidos para o projeto: o altímetro e o atuador mecânico de inclinação longitudinal e transversal da aeronave.O arquivos fonte do projeto do simulador de voo, seguem no link:  <a href="files/SIMULADOR_FSX.zip">SIMULADOR_FSX.zip</a></p>
-	  <br><br><br><br><br><br>
-	 
-    <h4>Simulador de voo (Flight Simulator 2024 e ESP32 com Display)</h4>
-      <p class="w3-text-grey"> Similar a versão anterior que captura os dados de telemetria do Flight Simulator e envia para um ESP32 com o display com um firmware específico que desenvolvi</a></p>
-	  <br><br><br><br><br><br>
-	 
+      <article class="project-item">
+        <div>
+          <h4>Simulador de voo</h4>
+          <p class="w3-text-grey">Esse projeto e composto de um software, feito em C#, que captura os dados de telemetria do Flight Simulator X para o envio para uma rede de atuadores conectados a uma porta serial. Um circuito com microcontrolador PIC e dois atuadores foram desenvolvidos para o projeto: o altimetro e o atuador mecanico de inclinacao longitudinal e transversal da aeronave. Os arquivos fonte do projeto seguem no link: <a href="files/SIMULADOR_FSX.zip">SIMULADOR_FSX.zip</a></p>
+        </div>
+        <div class="project-media">
+          <iframe class="project-iframe" src="https://www.youtube.com/embed/MMP6gXE43vI" title="Simulador de voo" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </article>
 
+      <article class="project-item">
+        <div>
+          <h4>Simulador de voo (Flight Simulator 2024 e ESP32 com Display)</h4>
+          <p class="w3-text-grey">Similar a versao anterior, captura dados de telemetria do Flight Simulator e envia para um ESP32 com display usando um firmware especifico que desenvolvi.</p>
+        </div>
+        <div class="project-media">
+          <iframe class="project-iframe" src="https://www.youtube.com/embed/OxyYXoj5YJM" title="Simulador de voo com ESP32" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </article>
 
-	  <h4>Emulador CHIP8</h4>
-      <p class="w3-text-grey">Chip8 foi uma arquitetura de máquina virtual utilizada em alguns computadores da década de 80. Esse projeto consiste de um emulador dessa arquitetura em um APP feito em Java, para o Android. O arquivo APK do projeto e os arquivos fonte seguem no link: <a href="files/chip8.zip">chip8.zip</a></p>
-	  <br><br><br><br><br><br><br><br><br>
+      <article class="project-item">
+        <div>
+          <h4>Emulador CHIP8</h4>
+          <p class="w3-text-grey">Chip8 foi uma arquitetura de maquina virtual utilizada em alguns computadores da decada de 80. Esse projeto consiste de um emulador dessa arquitetura em um app feito em Java para Android. O arquivo APK e os fontes seguem no link: <a href="files/chip8.zip">chip8.zip</a></p>
+        </div>
+        <div class="project-media">
+          <iframe class="project-iframe" src="https://www.youtube.com/embed/sVe7p0PfDD0" title="Emulador CHIP8" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </article>
 
-	  <h4>Controlador Digital</h4>
-      <p class="w3-text-grey">Demonstração do algoritmo de controle digital em uma simulação do controle de altitude de um foguete, atuando na potência de seus propulsores. Esse projeto está disponível em linguagem C# no link: <a href="files/ControleDigital.zip">ControleDigital.zip</a></p>
-	  <br><br><br><br><br><br><br><br><br><br>
-	
-	  <h4>Algoritmo Genético</h4>
-      <p class="w3-text-grey">Aplicação de teste do algoritmo genético associado a resolução de  problemas de roteamento. Outros tipos de problemas podem ser resolvidos com as bibliotecas desenvolvidas nesse projeto, feito em C#. Disponível no link: <a href="files/Genetic.zip">Genetic.zip</a></p>
-	  <br><br><br><br>
-	  
-	  <h4>Processador Neural</h4>
-      <p class="w3-text-grey">Este projeto consiste num processador de redes neurais para o uso em FPGAs Altera/Intel. O processador inclui instruções para o processamento do algoritmo forwardpropagation e backpropagation, e pode trabalhar com neurônios com funções de ativação ReLU (rectified linear unit). O processador opera com instruções de ponto fixo, para uma operação mais rápida e menor utilização de elementos lógicos. Esse projeto foi testado numa FPGA CycloneIII, que pode suportar até 15 desses processadores neurais, operando em paralelo. O projeto completo, feito em VHDL, pode ser baixado do seguinte link:<a href="files/Neural.zip">Neural.zip</a></p>
-	  <br><br><br><br><br>
-	  
-	  
-	  <h4>Processamento de imagem em C++</h4>
-      <p class="w3-text-grey">Este é um projeto de um simulador de corrida desenvolvido em C++ Pode ser baixado do seguinte link:<a href="files/OpenCVTest.zip">OpenCVTest.zip</a> e  <a href="files/OpenCVTest.z01">OpenCVTest.z01</a></p>
-	  <br><br><br><br><br><br><br><br>
-	  
-	  
-	  <h4>Sintetizador de Audio em C++</h4>
-      <p class="w3-text-grey">Este projeto é wrapper da API XAudio sendo usado para construir um sintetizador de áudio. No exemplo é emulado o mesmo som do sintetizador usado por Ferris Bueller no filme "Curtindo a vida adoidado". Disponível do seguinte link:<a href="files/SynthesizerDemo.zip">SynthesizerDemo.zip</a></p>
-	  <br><br><br><br><br><br><br><br>
-	 
+      <article class="project-item">
+        <div>
+          <h4>Controlador Digital</h4>
+          <p class="w3-text-grey">Demonstracao do algoritmo de controle digital em uma simulacao do controle de altitude de um foguete, atuando na potencia de seus propulsores. Esse projeto esta disponivel em C# no link: <a href="files/ControleDigital.zip">ControleDigital.zip</a></p>
+        </div>
+        <div class="project-media">
+          <img src="image/foguete.png" class="project-image" alt="Controlador Digital">
+        </div>
+      </article>
+
+      <article class="project-item">
+        <div>
+          <h4>Algoritmo Genetico</h4>
+          <p class="w3-text-grey">Aplicacao de teste do algoritmo genetico associado a resolucao de problemas de roteamento. Outros tipos de problemas podem ser resolvidos com as bibliotecas desenvolvidas nesse projeto em C#. Disponivel no link: <a href="files/Genetic.zip">Genetic.zip</a></p>
+        </div>
+        <div class="project-media">
+          <img src="image/genetico.png" class="project-image" alt="Algoritmo Genetico">
+        </div>
+      </article>
+
+      <article class="project-item">
+        <div>
+          <h4>Processador Neural</h4>
+          <p class="w3-text-grey">Este projeto consiste em um processador de redes neurais para FPGAs Altera/Intel. Inclui instrucoes para forwardpropagation e backpropagation, com suporte a ReLU e operacao em ponto fixo para maior desempenho. O projeto completo em VHDL esta no link: <a href="files/Neural.zip">Neural.zip</a></p>
+        </div>
+        <div class="project-media">
+          <img src="image/neural.png" class="project-image" alt="Processador Neural">
+        </div>
+      </article>
+
+      <article class="project-item">
+        <div>
+          <h4>Processamento de imagem em C++</h4>
+          <p class="w3-text-grey">Este e um projeto de simulador de corrida desenvolvido em C++. Pode ser baixado nos links: <a href="files/OpenCVTest.zip">OpenCVTest.zip</a> e <a href="files/OpenCVTest.z01">OpenCVTest.z01</a></p>
+        </div>
+        <div class="project-media">
+          <iframe class="project-iframe" src="https://www.youtube.com/embed/lA1TYUoVeNA" title="Processamento de imagem em C++" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </article>
+
+      <article class="project-item">
+        <div>
+          <h4>Sintetizador de Audio em C++</h4>
+          <p class="w3-text-grey">Este projeto e um wrapper da API XAudio usado para construir um sintetizador de audio. No exemplo, e emulado o mesmo som do sintetizador usado por Ferris Bueller no filme "Curtindo a vida adoidado". Disponivel no link: <a href="files/SynthesizerDemo.zip">SynthesizerDemo.zip</a></p>
+        </div>
+        <div class="project-media">
+          <iframe class="project-iframe" src="https://www.youtube.com/embed/qe3EA98zTiQ" title="Sintetizador de Audio em C++" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </article>
     </div>
-    
-	<div class="w3-col l6 w3-padding-large">		
-     <iframe width="500" height="315" src="https://www.youtube.com/embed/a1es98JdZoc" title="YouTube video player" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" frameborder="0" allowfullscreen></iframe>
-	</div>
-	
-	<div class="w3-col l6 w3-padding-large">		
-     <iframe width="500" height="315" src="https://www.youtube.com/embed/MMP6gXE43vI" title="YouTube video player" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" frameborder="0" allowfullscreen></iframe>
-	</div>
-
-  <div class="w3-col l6 w3-padding-large">		
-     <iframe width="500" height="315" src="https://www.youtube.com/embed/OxyYXoj5YJM" title="YouTube video player" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" frameborder="0" allowfullscreen></iframe>
-	</div>
-		
-	<div class="w3-col l6 w3-padding-large">		
-    <iframe width="500" height="315" src="https://www.youtube.com/embed/sVe7p0PfDD0" title="YouTube video player" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" frameborder="0" allowfullscreen></iframe>
-	</div>
-
-	<div class="w3-col l6 w3-padding-large">
-      <img src="image/foguete.png" class="w3-round w3-image " alt="Menu" style="width:100%">
-    </div>
- 
-	<div class="w3-col l6 w3-padding-large">
-      <img src="image/genetico.png" class="w3-round w3-image " alt="Menu" style="width:100%">
-    </div>	
-	
-	<div class="w3-col l6 w3-padding-large">
-      <img src="image/neural.png" class="w3-round w3-image " alt="Menu" style="width:100%">
-    </div>	
-	
-	<div class="w3-col l6 w3-padding-large">		
-    <iframe width="500" height="315" src="https://www.youtube.com/embed/lA1TYUoVeNA" title="YouTube video player" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" frameborder="0" allowfullscreen></iframe>
-	</div>
-	
-	<div class="w3-col l6 w3-padding-large">		
-    <iframe width="500" height="315" src="https://www.youtube.com/embed/qe3EA98zTiQ" title="YouTube video player" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" frameborder="0" allowfullscreen></iframe>
-	</div>
-	
   </div>
   
   
